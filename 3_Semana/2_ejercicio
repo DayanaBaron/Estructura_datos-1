@@ -45,7 +45,7 @@ namespace AplicacionBase
             foreach (int n in arreglo)
                 resultado = resultado + (n * n);
             Console.Write($" {resultado}");
-            Console.WriteLine("\n-----------");
+            Console.WriteLine("\n--------");
         }
     }
 }

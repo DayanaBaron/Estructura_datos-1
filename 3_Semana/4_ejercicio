@@ -99,7 +99,7 @@ namespace Aplicacionbase
             {
                 foreach (int n in arreglo)
                     Console.WriteLine("{0},", n);
-                Console.WriteLine("\n---------");
+                Console.WriteLine("\n-------");
             }
         }
     }
