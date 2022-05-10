@@ -1,0 +1,102 @@
+using System;
+
+namespace AplicacionBase
+{
+    // Aplicación que permite sumar o restar dos números
+
+    public class Operacion
+    {
+        // Protección de los datos a traves del modificador "protected"
+
+        protected string nombre;
+        protected int precio;
+        protected string descripcion;
+
+        /* Cambio en las propiedades de los datos a traves de los métodos Set y Get.
+         * Estas propiedades son públicas */
+
+        /* El método relacionado con la lectura se conoce como "get" y el 
+         * relacionado con la escritura es "set" */
+
+        public string Valor1
+        {
+            set
+            {
+                nombre = value;
+            }
+            get
+            {
+                return nombre;
+            }
+        }
+
+        public int Valor2
+        {
+            set
+            {
+                precio= value;
+            }
+            get
+            {
+                return precio;
+            }
+        }
+
+        public string Resultado
+        {
+            protected set
+            {
+                descripcion = value;
+            }
+            get
+            {
+                return descripcion;
+            }
+        }
+    
+
+
+
+     public void imprimir ()
+    {
+    	Console.WriteLine("digite el nombre del producto "+Valor1);
+    	Console.WriteLine("digita la descripcion del producto"+Valor2);
+    	Console.WriteLine("digite el precio del producto"+Resultado);
+    }
+
+
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Operacion nombre3= new Operacion();
+            nombre3.Valor1="banano";
+            nombre3.Valor2=1200;
+            nombre3.Resultado="Amarilla,es larga con un sabor dulce ";
+            Console.WriteLine("La frura se llama " +nombre3.Valor1);
+            Console.WriteLine("el precio de la banana es :" +nombre3.Valor2);
+            Console.WriteLine("la descripcion de la frutas es: " +nombre3.Resultado);
+            
+            Operacion nombre2= new Operacion();
+            nombre2.Valor1="Manzana";
+            nombre2.Valor2=1500;
+            nombre2.Resultado="Roja, redonda, un sabor dulce";
+            Console.WriteLine("La frura se llama " +nombre2.Valor1);
+            Console.WriteLine("el precio de la banana es :" +nombre2.Valor2);
+            Console.WriteLine("la descripcion de la frutas es: " +nombre2.Resultado);
+          
+            Operacion nombre4= new Operacion();
+            nombre4.Valor1="uva";
+            nombre4.Valor2=600;
+            nombre4.Resultado="Morada,es ovalada y chiquita con un sabor acido ";
+            Console.WriteLine("La frura se llama " +nombre4.Valor1);
+            Console.WriteLine("el precio de la banana es :" +nombre4.Valor2);
+            Console.WriteLine("la descripcion de la frutas es: " +nombre4.Resultado);
+            
+            Console.ReadKey();
+        }
+    }
+} 
+	
+}
